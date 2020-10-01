@@ -23,6 +23,9 @@
                 <li class="nav-item active">
                     <a class="nav-link mr-4" href="Punto3.php">Spring Step</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link mr-4" href="Punto4.php">Numeros Pares</a>
+                </li>
                 </ul>
             </div>
         </nav>
@@ -39,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Ingrese su altura:</label>
-                            <input type="text" class="form-control" placeholder="Digite su altura en 'm y cm'" name="altura">
+                            <input type="text" class="form-control" placeholder="Digite su altura en 'm. cm'" name="altura">
                         </div>
                         <button type="submit" class="btn btn-primary" name="calcular">Calcular</button>
                         <button type="submit" class="btn btn-primary" name="limpiar">Limpiar</button>
@@ -52,34 +55,41 @@
                         <?php
                                 $peso=$_POST["peso"];
                                 $altura=$_POST["altura"];
-                                $imc=$peso/($altura*$altura);
-                                 if($imc < 18.5){
-                                    echo("IMC: ".$imc);
-                                    echo(" Peso insuficiente");
-                                } else if($imc >= 18.5 && $imc <= 24.9){
-                                    echo("IMC: ".$imc);
-                                    echo(" Normopeso"); 
-                                }else if($imc >= 25 && $imc <= 26.9){
-                                    echo("IMC: ".$imc);
-                                    echo(" Sobrepeso Grado 1");
-                                }else if($imc >= 27 && $imc <= 29.9){
-                                    echo("IMC: ".$imc);
-                                    echo(" Sobrepeso Grado 2 (Preobesidad)");
-                                } else if($imc >= 30 && $imc <= 34.9){
-                                    echo("IMC: ".$imc);
-                                    echo(" Obesidad de Tipo 1");
-                                } else if($imc >= 35 && $imc <= 39.9){
-                                    echo("IMC: ".$imc);
-                                    echo(" Obesidad de Tipo 2");
-                                } else if($imc >= 40 && $imc <= 49.9){
-                                    echo("IMC: ".$imc);
-                                    echo(" Obesidad de Tipo 3 (Morbida)");
-                                } else if($imc >= 50){
-                                    echo("IMC: ".$imc);
-                                    echo(" Obecidad de tipo 4 (Extrema)");
+                                if($peso == 0 && $altura == 0){
+                                    echo("Porfavor digite los campos con los datos pedidos previamente");
+                                } else if ($peso == 0){
+                                    echo("Porfavor digite el peso");
+                                } else if ($altura == 0){
+                                    echo("Porfavor digite la altura");
                                 } else {
-                                    echo("Porfavor rellene los campos con los datos pedidos previamente");
+                                    $imc=$peso/($altura*$altura);
+                                    if($imc < 18.5){
+                                        echo("IMC: ".$imc);
+                                        echo(" Peso insuficiente");
+                                    } else if($imc >= 18.5 && $imc <= 24.9){
+                                        echo("IMC: ".$imc);
+                                        echo(" Normopeso"); 
+                                    }else if($imc >= 25 && $imc <= 26.9){
+                                        echo("IMC: ".$imc);
+                                        echo(" Sobrepeso Grado 1");
+                                    }else if($imc >= 27 && $imc <= 29.9){
+                                        echo("IMC: ".$imc);
+                                        echo(" Sobrepeso Grado 2 (Preobesidad)");
+                                    } else if($imc >= 30 && $imc <= 34.9){
+                                        echo("IMC: ".$imc);
+                                        echo(" Obesidad de Tipo 1");
+                                    } else if($imc >= 35 && $imc <= 39.9){
+                                        echo("IMC: ".$imc);
+                                        echo(" Obesidad de Tipo 2");
+                                    } else if($imc >= 40 && $imc <= 49.9){
+                                        echo("IMC: ".$imc);
+                                        echo(" Obesidad de Tipo 3 (Morbida)");
+                                    } else if($imc >= 50){
+                                        echo("IMC: ".$imc);
+                                        echo(" Obecidad de tipo 4 (Extrema)");
+                                    }
                                 }
+                            
                                 ?>
                             </h5>
                         </div>
