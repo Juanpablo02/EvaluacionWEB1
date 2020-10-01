@@ -21,7 +21,7 @@
                     <a class="nav-link mr-4" href="Punto2.php">Bodytech</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link mr-4" href="#">Pricing</a>
+                    <a class="nav-link mr-4" href="Punto3.php">Spring Step</a>
                 </li>
                 </ul>
             </div>
@@ -29,7 +29,7 @@
     </header>
 
     <main>
-        <h2 class="text-center mt-5">Calcula tu Indice Masa Corporal (IMC)</h2>
+        <h2 class="text-center mt-5">Calcula tu Indice de Masa Corporal (IMC)</h2>
         <div class=" justify-content-center" style="display: flex; margin:30px 0 30px 0">
             <div class="card m-4" style="width:600px;height:353px">
                     <form class="m-4" action="Punto2.php" method="POST">
@@ -77,7 +77,9 @@
                                 } else if($imc >= 50){
                                     echo("IMC: ".$imc);
                                     echo(" Obecidad de tipo 4 (Extrema)");
-                                } 
+                                } else {
+                                    echo("Porfavor rellene los campos con los datos pedidos previamente");
+                                }
                                 ?>
                             </h5>
                         </div>

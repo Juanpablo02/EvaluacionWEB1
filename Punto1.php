@@ -23,7 +23,7 @@
                     <a class="nav-link mr-4" href="Punto2.php">Bodytech</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link mr-4" href="#">Pricing</a>
+                    <a class="nav-link mr-4" href="Punto3.php">Spring Step</a>
                 </li>
                 </ul>
             </div>
